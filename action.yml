@@ -1,0 +1,16 @@
+name: "kube-score"
+description: "Score Kubernetes manifests using kube-score by zegl on GitHub"
+author: "Marc Leibold"
+branding:
+  icon: "check"
+  color: "green"
+inputs: 
+  files:
+    description: "Files or directories to score"
+    default: "*/*.yaml"
+outputs:
+  results:
+    description: "Scoring results"
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
